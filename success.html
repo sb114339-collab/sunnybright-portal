@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admission Successful</title>
+  <title>Application Successful</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
   <div class="container">
-    <h2>✅ Admission Successful</h2>
-    <p>Thank you, {{ student.fullname }}!</p>
-    <p>Your Matric Number is: <strong>{{ student.matric_no }}</strong></p>
-    <p>Selected Course: {{ student.course }}</p>
+    <h2>✅ Application Submitted!</h2>
+    <p>Thank you, {{ fullname }}.</p>
+    <p>Your Matric Number is: <b>{{ matric_no }}</b></p>
+    <p>We’ll contact you via email soon.</p>
     <a href="/" class="btn">Back to Home</a>
   </div>
 </body>
