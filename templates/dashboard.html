@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dashboard - Sunny Bright Institute</title>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
-    <h1>Welcome {{ user }}!</h1>
-    <p>You are logged in as: {{ role }}</p>
-    {% if role == "admin" %}
-        <p>🔑 Admin Dashboard – Manage Students</p>
-    {% else %}
-        <p>📚 Student Dashboard – View Courses</p>
-    {% endif %}
+<body class="dashboard">
+  <div class="sidebar">
+    <h2>Menu</h2>
+    <ul>
+      <li>My Courses</li>
+      <li>Payments</li>
+      <li>Results</li>
+      <li>Logout</li>
+    </ul>
+  </div>
+  <div class="main">
+    <h1>Welcome {{ user }}</h1>
+    <p>This is your dashboard (Fedena + Eskooly style coming next).</p>
+  </div>
 </body>
 </html>
