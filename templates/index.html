@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sunny Bright Institute Portal</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body class="home">
+<body>
   <div class="container">
     <h1>📚 Sunny Bright Institute of Creativity</h1>
-    <p>Welcome to the Student & Admin Portal</p>
-    <a href="{{ url_for('login') }}" class="btn">Login</a>
+    <p>Welcome to our student portal – powered with the style of Lautech & Fedena 🎓</p>
+    
+    <div class="menu">
+      <a href="/admission" class="btn">Apply for Admission</a>
+      <a href="/student-login" class="btn">Student Login</a>
+      <a href="/admin-login" class="btn">Admin Login</a>
+    </div>
   </div>
 </body>
 </html>
