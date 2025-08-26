@@ -1,13 +1,11 @@
 from flask import Flask, render_template, request, redirect, url_for
-import random
 
 app = Flask(__name__)
 
-# Store student admissions
-students = []
+students = []  # store student records here
 
 @app.route('/')
-def home():
+def index():
     return render_template('index.html')
 
 @app.route('/admission', methods=['GET', 'POST'])
@@ -18,20 +16,19 @@ def admission():
         phone = request.form['phone']
         course = request.form['course']
 
-        # Generate matric number
-        matric_no = "SBIC" + str(random.randint(1000, 9999))
+        # generate matric no (simple example)
+        matric_no = "SBIC" + str(len(students) + 1).zfill(4)
 
-        # Save student details
-        student = {
+        # save student record
+        students.append({
             "fullname": fullname,
             "email": email,
             "phone": phone,
             "course": course,
             "matric_no": matric_no
-        }
-        students.append(student)
+        })
 
-        return render_template('success.html', student=student)
+        return render_template('success.html', fullname=fullname, matric_no=matric_no)
 
     return render_template('admission.html')
 
