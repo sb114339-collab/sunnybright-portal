@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admission Form</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>🎓 Admission Form</h2>
+    <form method="POST" action="/admission">
+      <input type="text" name="fullname" placeholder="Full Name" required><br>
+      <input type="email" name="email" placeholder="Email Address" required><br>
+      <input type="text" name="phone" placeholder="Phone Number" required><br>
+      
+      <label for="course">Choose Course:</label><br>
+      <select name="course" required>
+        <option value="Web Development Basics">Web Development Basics</option>
+        <option value="Python Programming">Python Programming</option>
+        <option value="Graphic Design">Graphic Design</option>
+      </select><br><br>
+
+      <button type="submit" class="btn">Proceed to Payment</button>
+    </form>
+  </div>
+</body>
+</html>
