@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - Sunny Bright Institute</title>
+</head>
+<body>
+    <h1>Welcome {{ user }}!</h1>
+    <p>You are logged in as: {{ role }}</p>
+    {% if role == "admin" %}
+        <p>🔑 Admin Dashboard – Manage Students</p>
+    {% else %}
+        <p>📚 Student Dashboard – View Courses</p>
+    {% endif %}
+</body>
+</html>
